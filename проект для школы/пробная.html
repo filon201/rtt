@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автомобили в наличии | DragonDrive</title>
+    <style>
+        /* Общие стили */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background: #fff;
+            border-bottom: 1px solid #e1e1e1;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar {
+            display: flex;
+            max-width: 1200px;
+            margin: auto;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            margin: 0 10px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            color: #007bff;
+        }
+
+        .navbar .logo {
+            font-weight: 600;
+            font-size: 24px;
+            color: #000000;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #007bff, #00bfff);
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin: 0 0 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin: 0 0 20px;
+        }
+
+        .content-wrapper {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            gap: 30px;
+        }
+
+        .filters {
+            width: 250px;
+            padding: 20px;
+            background: #fff;
+            border: 1px solid #e1e1e1;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .filters .filter-group {
+            margin-bottom: 20px;
+        }
+
+        .filters h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .filters label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .car-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            flex: 1;
+        }
+
+        .car-card {
+            cursor: pointer;
+            background: #fff;
+            border: 1px solid #e1e1e1;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: calc(33.333% - 20px); /* 3 карточки в строку */
+        }
+
+        .car-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .car-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .car-card h3 {
+            font-size: 22px;
+            margin: 0 0 10px;
+        }
+
+        .car-card p {
+            font-size: 14px;
+            color: #666;
+            margin: 0 0 15px;
+        }
+
+        .car-card .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .section-title {
+            width: 100%;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="left-links">
+                <li><a href="#">Главная</a></li>
+            </ul>
+            <div class="logo">
+                DragonDrive <span class="logo-chinese">龙驱动</span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Автомобили в наличии</h1>
+            <p>Новые автомобили в наличии у официальных дилеров LiXiang и Zeekr</p>
+        </section>
+
+        <div class="content-wrapper">
+            <aside class="filters">
+                <div class="filter-group">
+                    <h3>Модель</h3>
+                    <label><input type="checkbox" id="lixiang-checkbox" checked> LiXiang</label>
+                    <label><input type="checkbox" id="zeekr-checkbox" checked> Zeekr</label>
+                </div>
+            </aside>
+
+            <section class="car-grid" id="lixiang-cars">
+                <h2 class="section-title">LiXiang</h2>
+                <div class="car-card" onclick="window.location.href='lixiang-l9.html';">
+                    <img src="https://via.placeholder.com/300" alt="LiXiang L9">
+                    <h3>LiXiang L9 2024</h3>
+                    <p>Кузов Внедорожник 5 дв., 449 л.с., 330 кВт, гибрид, Разгон до 100 - 5.0 сек, Макс. скорость 180 км/ч, Запас хода 215 км, Налог 60 615 ₽ / год, Коробка автоматическая, Привод полный, Цвет Черный, Салон Оранжевый, Кожа, Ткань</p>
+                    <span class="price">8 299 000 ₽</span>
+                </div>
+                <div class="car-card" onclick="window.location.href='lixiang-l9.html';">
+                    <img src="https://via.placeholder.com/300" alt="LiXiang L9">
+                    <h3>LiXiang L9 2024</h3>
+                    <p>Кузов Внедорожник 5 дв., 449 л.с., 330 кВт, гибрид, Разгон до 100 - 5.0 сек, Макс. скорость 180 км/ч, Запас хода 215 км, Налог 60 615 ₽ / год, Коробка автоматическая, Привод полный, Цвет Серый, Салон Кофейный, Кожа, Ткань</p>
+                    <span class="price">8 299 000 ₽</span>
+                </div>
+                <div class="car-card" onclick="window.location.href='lixiang-l9.html';">
+                    <img src="https://via.placeholder.com/300" alt="LiXiang L9">
+                    <h3>LiXiang L9 2024</h3>
+                    <p>Кузов Внедорожник 5 дв., 449 л.с., 330 кВт, гибрид, Разгон до 100 - 5.0 сек, Макс. скорость 180 км/ч, Запас хода 215 км, Налог 60 615 ₽ / год, Коробка автоматическая, Привод полный, Цвет Зеленый, Салон Оранжевый, Кожа</p>
+                    <span class="price">8 299 000 ₽</span>
+                </div>
+            </section>
+
+            <section class="car-grid" id="zeekr-cars">
+                <h2 class="section-title">Zeekr</h2>
+                <div class="car-card" onclick="window.location.href='zeekr-001.html';">
+                    <img src="https://via.placeholder.com/300" alt="Zeekr 001">
+                    <h3>Zeekr 001 2024</h3>
+                    <p>Кузов Внедорожник 5 дв., 536 л.с., 400 кВт, электрический, Разгон до 100 - 3.8 сек, Макс. скорость 200 км/ч, Запас хода 600 км, Коробка автоматическая, Привод полный, Цвет Черный, Салон Черный, Кожа</p>
+                    <span class="price">9 500 000 ₽</span>
+                </div>
+                <div class="car-card" onclick="window.location.href='zeekr-001.html';">
+                    <img src="https://via.placeholder.com/300" alt="Zeekr 001">
+                    <h3>Zeekr 001 2024</h3>
+                    <p>Кузов Внедорожник 5 дв., 536 л.с., 400 кВт, электрический, Разгон до 100 - 3.8 сек, Макс. скорость 200 км/ч, Запас хода 600 км, Коробка автоматическая, Привод полный, Цвет Серый, Салон Белый, Кожа</p>
+                    <span class="price">9 500 000 ₽</span>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const lixiangCheckbox = document.getElementById('lixiang-checkbox');
+            const zeekrCheckbox = document.getElementById('zeekr-checkbox');
+            const lixiangCars = document.getElementById('lixiang-cars');
+            const zeekrCars = document.getElementById('zeekr-cars');function updateCarSections() {
+                if (lixiangCheckbox.checked && zeekrCheckbox.checked) {
+                    lixiangCars.style.display = 'flex';
+                    zeekrCars.style.display = 'flex';
+                } else if (lixiangCheckbox.checked) {
+                    lixiangCars.style.display = 'flex';
+                    zeekrCars.style.display = 'none';
+                } else if (zeekrCheckbox.checked) {
+                    lixiangCars.style.display = 'none';
+                    zeekrCars.style.display = 'flex';
+                } else {
+                    lixiangCars.style.display = 'none';
+                    zeekrCars.style.display = 'none';
+                }
+            }
+
+            lixiangCheckbox.addEventListener('change', updateCarSections);
+            zeekrCheckbox.addEventListener('change', updateCarSections);
+        });
+    </script>
+</body>
+</html>
